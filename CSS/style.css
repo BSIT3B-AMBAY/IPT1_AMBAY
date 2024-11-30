@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #222831;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #31363F;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+}
+
+.navlinks li {
+    margin-left: 20px;
+}
+
+.navlinks a {
+    color: #EEEEEE;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navlinks a:hover {
+    color: #76ABAE;
+}
+
+.hero-header {
+    background: linear-gradient(135deg, #222831, #31363F);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #76ABAE;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero-text h5 {
+    font-family: "Londrina Sketch", cursive;
+    color: #EEEEEE;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero-text p {
+    color: #EEEEEE;
+    margin: 20px 0;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #76ABAE;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #007ced;
+    transform: translateY(-3px);
+}
+
+.active {
+    border: 2px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-pic {
+        margin-bottom: 20px;
+    }
+
+    nav .togglebtn {
+        display: block;
+    }
+
+    .navlinks {
+        flex-direction: column;
+    }
+}
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #EEEEEE;
+    margin-right: 2.5rem;
+}
+nav .navlinks a.active {
+    color: #76ABAE;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .hero-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #76ABAE;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h5 {
+    color: #EEEEEE;
+    font-size: 24px;
+    font-family: "Londrina Sketch", sans-serif;
+}
+
+.hero-text h5 span {
+    color: #76ABAE;
+    font-size: 26px;
+    font-family: "Londrina Sketch", sans-serif;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: #EEEEEE;
+}
+
+/* About Section */
+.about-section {
+    background-color: #31363F;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #76ABAE;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #EEEEEE;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #222831;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: #76ABAE;
+    margin-bottom: 1.5rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill {
+    width: 200px;
+    text-align: center;
+}
+
+.skill i {
+    font-size: 3rem;
+    color: #76ABAE;
+    margin-bottom: 1rem;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    color: #EEEEEE;
+}
+
+.skill p {
+    font-size: 0.95rem;
+    color: #EEEEEE;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #31363F;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #76ABAE;
+    margin-bottom: 1.5rem;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #76ABAE;
+    border-radius: 5px;
+    background: #222831;
+    color: #EEEEEE;
+    font-size: 1rem;
+}
+
+.contact-section textarea {
+    height: 120px;
+}
+
+.contact-section button {
+    padding: 12px 30px;
+    border: none;
+    background-color: #76ABAE;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #007ced;
+}
+
+/* Responsive Design */
+@media (max-width: 930px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding: 40px 0;
+    }
+}
+
